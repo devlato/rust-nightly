@@ -5,7 +5,7 @@ Current rust toolchain version: nightly-2018-02-02-x86_64-unknown-linux-gnu
 ## Using the image from Docker Hub
 
 ```sh
-$ docker pull 57Rodneys/rust-nightly:latest
+$ docker pull 57rodneys/rust-nightly:latest
 ```
 
 ## Building the image
