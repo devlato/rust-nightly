@@ -7,7 +7,6 @@ MAINTAINER Denis Tokarev
 RUN apt-get update \
   && apt-get install -y \
     make=4.1-9.1 \
-    git=1:2.15.1-1ubuntu2 \
     gcc=4:7.2.0-1ubuntu1 \
     curl=7.57.0-1ubuntu1 \
   && rm -rf /var/lib/apt/lists/*
