@@ -13,12 +13,13 @@ ENV \
   SW_GLIBC_PACKAGES="glibc glibc-bin glibc-i18n"\
   SW_GLIBC_TMP_FILE_NAME=/tmp/glibc-${SW_GLIBC_VERSION}.apk\
   \
-  SW_MAKE_VERION=4.2.1-r0\
-  SW_CURL_VERION=7.58.0-r0\
-  SW_OPENSSL_VERION=1.0.2n-r0\
-  SW_CS_CERTIFICATES_VERION=20171114-r0\
-  SW_LIBGCC_VERION=6.4.0-r5\
-  SW_ZLIB_VERION=1.2.11-r1\
+  SW_MAKE_VERSION=4.2.1-r0\
+  SW_CURL_VERSION=7.58.0-r0\
+  SW_OPENSSL_VERSION=1.0.2n-r0\
+  SW_CS_CERTIFICATES_VERSION=20171114-r0\
+  SW_LIBGCC_VERSION=6.4.0-r5\
+  SW_ZLIB_VERSION=1.2.11-r1\
+  SW_GCC_VERSION=6.4.0-r5\
   \
   SW_RUST_VERSION=nightly-2018-02-02-x86_64-unknown-linux-gnu
 
@@ -33,12 +34,13 @@ RUN \
   done && \
   \
   apk --no-cache -v add --update \
-    make=4.2.1-r0 \
-    curl=7.58.0-r0 \
-    openssl=1.0.2n-r0 \
-    ca-certificates=20171114-r0 \
-    libgcc=6.4.0-r5 \
-    zlib=1.2.11-r1 && \
+    make=$SW_MAKE_VERSION \
+    curl=$SW_CURL_VERSION \
+    openssl=$SW_OPENSSL_VERSION \
+    ca-certificates=$SW_CS_CERTIFICATES_VERSION \
+    libgcc=$SW_LIBGCC_VERSION \
+    zlib=$SW_ZLIB_VERSION && \
+    gcc=$SW_GCC_VERSION && \
   \
   rm -rf /var/cache/apk/*
 
